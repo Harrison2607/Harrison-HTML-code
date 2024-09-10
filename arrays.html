@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+<p id="ket"></p>
+<p id="hi"></p>
+<p id="o"></p>
+<p id="tree"></p>
+<p id="demo"></p>
+<script>
+var cri=["vir","roh","har","sky","jas"];
+document.getElementById("ket").innerHTML= cri[2];
+document.getElementById("hi").innerHTML=cri.join("*");
+document.getElementById("o").innerHTML=cri.pop();
+document.getElementById("tree").innerHTML=cri;
+function add(a,b){
+    return a+b;
+}
+function average(a,b){
+ return add (a,b)/2
+}
+let result=average(10,20);
+document.getElementById("demo").innerHTML=result;
+</script>
+</body>
+</html>

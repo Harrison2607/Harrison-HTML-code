@@ -1,0 +1,44 @@
+document.write(a);
+ var sch;
+ switch (new Date().getDay()) {
+  case 0:
+    sch="brush";
+    break;
+
+
+    case 1:
+    sch="wear school uniform";
+    break;
+
+
+    case 2:
+    sch="eat breakfast";
+    break;
+
+
+    case 3:
+    sch="go to school";
+    break;
+
+
+    case 4:
+    sch="come back";
+    break;
+
+
+    case 5:
+    sch="eat lunch";
+    break;
+
+
+    case 6:
+    sch="homework";
+    break;
+
+
+ }
+ document.write("we do-")
+ document.write(day)
+</script>
+</body>
+ </html>

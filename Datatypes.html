@@ -1,0 +1,44 @@
+<html>
+<head>
+
+
+</head>
+<body>
+    <button onclick="yuo()"> CLICK ME </button>
+<script>
+function yuo () {
+   var greeting;
+   var time=new Date().getHours();
+   if (time < 11){
+      greeting="good morning";
+   }
+   else if (time < 20){
+        greeting="good day";
+   }
+   else {
+     greeting="good evening"
+   }
+    document.write("current hour is "+ time )
+    document.write("<br>")
+    document.write(greeting)
+}
+
+
+var a = 11;
+var b = 30;
+var c = 30;
+var d = null;
+var e ;
+document.write ("the value of a and b   "+(a==b))
+document.write("<br>")
+document.write ("the value of b and c   "+(b==c))
+document.write("<br>")
+document.write("the value of d  "+ d)
+document.write("<br>")
+document.write("the value of e  "+ e)
+
+</script>
+
+
+</body>
+</html>
