@@ -1,0 +1,52 @@
+<html>
+<head></head>
+<body>
+    <p id="normal"></p>
+    <p id="stringer"></p>
+    <p id="water"></p>
+    <p id="error_message"></p>
+<script>
+   var h= "hi";
+   var y= "robot";
+   document.getElementById("normal").innerHTML= h + y;
+   document.getElementById("stringer").innerHTML= String(h)+String(y);
+
+          arrow= (r,m)=>r+m
+          document.getElementById("water").innerHTML= arrow(5,7)
+
+          try{
+             addalert("pop")
+          }
+          catch(err){
+            document.getElementById("error_message").innerHTML=
+            err.message;
+          }
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
