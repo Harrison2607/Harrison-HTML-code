@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+    <p id="web"></p>
+    Hi 
+    <p id="tree"></p>
+<script>
+     var a = {
+         name :"Harrison",
+         age : 10,
+         city: "Delhi",
+         gender: "Male"
+             };
+     var b = JSON.stringify(a);
+     var c =JSON.parse(b);
+
+        // document.getElementById("web").innnerHTML= "My name is  " + c.name + "I am" +
+        // c.age + "I live in" + c.city + "I am a  "+ c.gender;
+         document.getElementById("tree").innerHTML= "I am "+c.name +" "+ "I am  " + c.age +" "+"I live in  " + c.city +" "+"I am a  "+ c.gender;
+</script>
+
+
+</body>
+</html>
