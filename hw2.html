@@ -1,0 +1,52 @@
+<html>
+<head></head>
+<body>
+    <p id="one"></p>
+    <p id="stage"></p>
+    <p id="wa"></p>
+    <p id="error_message"></p>
+<script>
+   var h= "small";
+   var y= "car";
+   document.getElementById("one").innerHTML= h + y;
+   document.getElementById("stage").innerHTML= String(h)+String(y);
+
+          arrow= (r,m)=>r+m
+          document.getElementById("wa").innerHTML= arrow(5,7)
+
+          try{
+             addalert("pop")
+          }
+          catch(err){
+            document.getElementById("error_message").innerHTML=
+            err.message;
+          }
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
