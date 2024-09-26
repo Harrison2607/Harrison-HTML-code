@@ -1,0 +1,45 @@
+<html></html>
+<head>
+
+</head>
+<body>
+     <p id="home"></p>
+     <p id="leo"></p>
+     <p id="abc"></p>
+    <script>
+        class student{
+            constructor(name,grade){
+               this.name=name
+               this.grade=grade
+             }
+             show (){
+               return "Messi" ;
+               
+             }
+             
+        }
+        te1= new student("Mohan",8)
+        document.getElementById("home").innerHTML=
+        "he is"+ te1.name + "  he got  "+ te1.grade
+        document.getElementById("abc").innerHTML=te1.show()
+          
+        te2= new student("Eesa",5)
+        document.getElementById("leo").innerHTML=
+        " He is " + te2.name+"   and he got a grade of "+te2.grade
+
+          
+
+      
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

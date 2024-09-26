@@ -4,6 +4,7 @@
     <p id="web"></p>
     Hi 
     <p id="tree"></p>
+    <p id="brush"></p>
 <script>
      var a = {
          name :"Harrison",
@@ -17,8 +18,14 @@
         // document.getElementById("web").innnerHTML= "My name is  " + c.name + "I am" +
         // c.age + "I live in" + c.city + "I am a  "+ c.gender;
          document.getElementById("tree").innerHTML= "I am "+c.name +" "+ "I am  " + c.age +" "+"I live in  " + c.city +" "+"I am a  "+ c.gender;
-</script>
-
-
+         async function add (a,b){
+               let response= await a+b;
+               display(response);
+         }
+         function display(some){
+            document.getElementById("brush").innerHTML=some;
+         }
+         add (5,20);
+     </script>
 </body>
 </html>
