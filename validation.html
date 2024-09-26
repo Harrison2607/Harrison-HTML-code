@@ -1,0 +1,56 @@
+<html>
+<head></head>
+<body>
+<script>
+  function valid(){
+        var x= document.forms["hform"]["fname"].value;
+            if(x==""){
+                alert ("Please enter a name")
+            }
+         
+         var y=document.forms["hform"]["sname"].value;
+            if(y==""){
+                alert ("Please enter surname")
+            }
+        }
+    function myFunction(){
+        var z= document.getElementById("id1");
+        if(!z.checkValidity()){
+           document.getElementById("result").innerHTML=z.validationMessage;
+
+        }else{
+            document.getElementById("result").innerHTML="Input OK";
+        }
+    }
+
+
+
+
+
+
+</script>
+  <form name="hform"  onsubmit="valid()">
+    Name = <input type="text" name="fname">
+    <br>
+    Last Name = <input type="text"name="sname" >
+    <br> 
+    <input type="submit" value="submit">
+    <br>
+    <p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" min="100" max="300" required>
+
+<button onclick="myFunction()">OK</button>
+
+<p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+
+<p id="result"></p>
+
+
+  </form>
+
+
+
+
+</body>
+</html>
