@@ -21,7 +21,11 @@
         background-color:lightcoral;
         color:black;
      }
-
+       .carousel-container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+       }
 
     </style>
 </head>
@@ -33,8 +37,31 @@
         <a href="gallery.html">Gallery</a>
         
     </div>
-      
-
+        <center><h1> Places i want to visit  </h1></center>
+      <div class="carousel-container">
+             <img class="myslide" src="scene1.png" height="300" width="300">
+             <img class="myslide" src="scene2.png" height="300" width="300">
+             <img class="myslide" src="scene3.png" height="300" width="300">
+             <img class="myslide" src="scenee4.png" height="300" width="300">
+             <img class="myslide" src="scene5.png" height="300" width="300">
+      </div>
+         <script>
+            var index=0;
+            function slider(){
+                var i;
+                var x= document.getElementsByClassName("myslide");
+                for (i=0;i<x.length;i++){
+                     x[i].style.display="none";
+                }
+                 index++;
+                 if(index>x.length){
+                    index=1;
+                 }
+                 x[index-1].style.display="block";
+                  setTimeout(slider,2000);
+            }
+            slider()
+         </script>
 
 
 
