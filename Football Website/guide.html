@@ -1,0 +1,165 @@
+<html>
+<head>
+    <html>
+        <head>
+            <style>
+             .topnav{
+                overflow:hidden;
+                background-color: #333 ;
+             }
+             .topnav a{
+                float:left;
+                color: darkgoldenrod;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+             }
+             .topnav a:hover{
+                 background-color: lightsteelblue;
+                 color:darkgoldenrod;
+             }
+             .topnav a.active{
+                background-color:lightcoral;
+                color:black;
+             }
+        
+        
+            </style>
+        </head>
+        <body>
+            <div class="topnav">
+                <a class="active" href="Capstone.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="guide.html">Guide</a>
+            </div>
+</head>
+<body>
+    
+   <h1><center>FOOTBALL</center></h1>
+   <h3><center>A sport so fine it is divine</center></h3>
+   <div id="match-status">
+    <h2>Match: Team A vs Team B</h2>
+    <p>Time: <span id="time">00:00</span></p>
+    <p>Score: <span id="score">0 - 0</span></p>
+  </div>
+  <div id="term-list">
+    <button onclick="showTerm('Goalkeeper')">Goalkeeper</button>
+    <button onclick="showTerm('Offside')">Offside</button>
+  </div>
+  <div id="definition">
+    <p id="definition-text">Click on a term to see the definition.</p>
+  </div>
+  
+  <script>
+    const terms = {
+      "Goalkeeper": "The player positioned in front of the goal to prevent the opposing team from scoring.",
+      "Offside": "A rule violation where a player is positioned closer to the opponent's goal line than both the ball and the second-last defender when the ball is passed to them."
+    };
+  
+    function showTerm(term) {
+      document.getElementById('definition-text').innerText = terms[term];
+    }
+  </script>
+  
+  <script>
+
+    let minutes = 0;
+    let seconds = 0;
+    let scoreA = 0;
+    let scoreB = 0;
+  
+    function updateTime() {
+      seconds++;
+      if (seconds == 60) {
+        seconds = 0;
+        minutes++;
+      }
+  
+      document.getElementById("time").innerText = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  
+      // Randomly score a goal
+      if (Math.random() < 0.01) { // 1% chance every second to score
+        if (Math.random() < 0.5) {
+          scoreA++;
+        } else {
+          scoreB++;
+        }
+        document.getElementById("score").innerText = `${scoreA} - ${scoreB}`;
+      }
+    }
+  
+    setInterval(updateTime, 1000);
+  </script>
+  <div id="rules">
+    <h2>Football Rules</h2>
+    <ul>
+      <li><a href="javascript:void(0)" onclick="showRule('offside')">Offside</a></li>
+      <li><a href="javascript:void(0)" onclick="showRule('fouls')">Fouls and Cards</a></li>
+      <li><a href="javascript:void(0)" onclick="showRule('free-kicks')">Free Kicks</a></li>
+    </ul>
+    <div id="rule-description"></div>
+  </div>
+  
+  <script>
+    const rules = {
+      'offside': 'A player is offside if they are closer to the opponent’s goal line than both the ball and the second-last defender at the moment the ball is passed to them.',
+      'fouls': 'A foul is an unfair or illegal action, such as tripping or pushing an opponent, which results in a free kick or penalty.',
+      'free-kicks': 'A free kick is awarded to a team when an opponent commits a foul. It can be either direct (a goal can be scored) or indirect (another player must touch the ball before a goal).'
+    };
+  
+    function showRule(rule) {
+      document.getElementById('rule-description').innerText = rules[rule];
+    }
+  </script>
+  <div id="player-stats">
+    <h2>Player Stats</h2>
+    <input type="text" id="player-name" placeholder="Enter player name">
+    <button onclick="addPlayerStats()">Add Stats</button>
+    <table id="stats-table">
+      <thead>
+        <tr><th>Player</th><th>Goals</th><th>Assists</th><th>Yellow Cards</th><th>Red Cards</th></tr>
+      </thead>
+      <tbody id="stats-body"></tbody>
+    </table>
+  </div>
+  
+  <script>
+    let players = [];
+  
+    function addPlayerStats() {
+      let playerName = document.getElementById('player-name').value;
+      if (playerName) {
+        let player = {
+          name: playerName,
+          goals: Math.floor(Math.random() * 10),
+          assists: Math.floor(Math.random() * 5),
+          yellowCards: Math.floor(Math.random() * 3),
+          redCards: Math.floor(Math.random() * 1)
+        };
+        players.push(player);
+        updateStatsTable();
+      }
+    }
+  
+    function updateStatsTable() {
+      const statsBody = document.getElementById('stats-body');
+      statsBody.innerHTML = '';
+      players.forEach(player => {
+        let row = document.createElement('tr');
+        row.innerHTML = `<td>${player.name}</td><td>${player.goals}</td><td>${player.assists}</td><td>${player.yellowCards}</td><td>${player.redCards}</td>`;
+        statsBody.appendChild(row);
+      });
+    }
+  </script>
+  <p>Football,also known as soccer is one of the most famous sports in the world.The organization called FIFA creates rules and regulations for the game.In this sport both the teams have eleven players and they try to score goals.It is not only a sport but pride,entertainment and many more for fans. Players can win world cup which is held every four years which determines the best country.There is a award callend ballandor which is given to the best player that year.</p>  
+  
+
+
+
+
+
+</body>
+</html>
