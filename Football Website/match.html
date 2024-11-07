@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Rules Engine</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { color: #333; }
+    .rule-box { margin-top: 10px; padding: 10px; border: 1px solid #ddd; }
+    button { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    .topnav{
+        overflow:hidden;
+        background-color: #333 ;
+     }
+     .topnav a{
+        float:left;
+        color: darkgoldenrod;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+     }
+     .topnav a:hover{
+         background-color: lightsteelblue;
+         color:darkgoldenrod;
+     }
+     .topnav a.active{
+        background-color:lightcoral;
+        color:black;
+     }
+       .carousel-container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+       }
+       .footer{
+         display: flex;
+         justify-content: space-around;
+         background-color: #333;
+         color: #fff;
+         padding: 20px;
+         position:fixed;
+         bottom:0;        
+         left:0;
+         width: 100%;
+       }
+  </style>
+
+</head>
+<body>
+  <div class="footer">
+    @copyright -Made by Harrison Yambem
+</div>
+    <div class="topnav">
+        <a class="active" href="myweb.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="guide.html">Guide</a>
+        <a href="match.html">Rules</a>
+        
+    </div>
+
+  <h2>Football Rules Engine</h2>
+
+  <div id="gameStatus" class="rule-box">
+    <p><strong>Current Score:</strong> <span id="score">0 - 0</span></p>
+    <p><strong>Fouls:</strong> <span id="fouls">0</span></p>
+    <p><strong>Yellow Cards:</strong> <span id="yellowCards">0</span></p>
+    <p><strong>Red Cards:</strong> <span id="redCards">0</span></p>
+    <p><strong>Offsides:</strong> <span id="offsides">0</span></p>
+    <p><strong>Substitutions:</strong> <span id="substitutions">0</span></p>
+  </div>
+
+  <div class="rule-box">
+    <button onclick="scoreGoal('home')">Home Team Scores!</button>
+    <button onclick="scoreGoal('away')">Away Team Scores!</button>
+    <button onclick="commitFoul()">Commit a Foul</button>
+    <button onclick="checkOffside()">Check for Offside</button>
+    <button onclick="makeSubstitution()">Make a Substitution</button>
+    <button onclick="awardFreeKick()">Award a Free Kick</button>
+  </div>
+
+  <div id="message"></div>
+
+  <script src="script.js"></script>
+  <div class="footer">
+    @copyright -Made by Harrison Yambem
+</div>
+</body>
+</html>
